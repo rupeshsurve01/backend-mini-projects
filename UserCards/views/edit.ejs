@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+
+        <a class="text-blue-500 mb-5 inline-block" href="/read">← Back</a>
+
+        <h1 class="text-3xl mb-5">Edit User</h1>
+
+        <form action="/update/<%= editUser._id %>" method="post">
+
+            <input type="text"
+                   name="name"
+                   value="<%= editUser.name %>"
+                   placeholder="Name"
+                   class="px-5 py-2 mb-3 block border-2 border-zinc-700 bg-transparent rounded">
+
+            <input type="email"
+                   name="email"
+                   value="<%= editUser.email %>"
+                   placeholder="Email"
+                   class="px-5 py-2 mb-3 block border-2 border-zinc-700 bg-transparent rounded">
+
+            <input type="text"
+                   name="imageurl"
+                   value="<%= editUser.imageurl %>"
+                   placeholder="Image URL"
+                   class="px-5 py-2 mb-3 block border-2 border-zinc-700 bg-transparent rounded">
+
+            <button class="px-5 py-2 bg-yellow-500 text-black rounded">
+                Update User
+            </button>
+
+        </form>
+    </div>
+</body>
+</html>
